@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(55, 55, 55);
+    color: rgb(210, 210, 210);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+}
+
+h2 {
+    margin-left: 70px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.game {
+    background-color: gray;
+    color: white;
+    border: solid;
+    border-color: black;
+    border-radius: 15px;
+    text-decoration: none;
+    margin-left: 70px;
+    margin-bottom: 20px;
+    display: block;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.game:hover {
+    background-color: rgb(94, 94, 94);
+}
+
+.game:active {
+    background-color: rgb(54, 54, 54);
+}

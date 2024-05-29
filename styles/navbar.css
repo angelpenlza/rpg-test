@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+    margin: 70px 20px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+    
+}
+
+.menu-item {
+    flex-grow: 1;
+    text-decoration: none;
+    color: white;
+    padding: 30px 50px;
+    text-align: center;
+    border-top: solid;
+    border-bottom: solid;
+}
+
+.menu-item:hover {
+    background-color: rgb(36, 36, 36);
+    border-color: white;
+    color: white;
+}

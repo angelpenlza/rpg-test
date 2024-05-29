@@ -1,0 +1,98 @@
+h2 {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px;
+    margin-bottom: 0;
+}
+
+.row {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.box, .target {
+    background-color: rgb(44, 44, 44);
+    border: solid;
+    height: 170px;
+    width: 170px;
+}
+
+.box:hover {
+    background-color: rgb(88, 88, 88);
+}
+
+.box:active {
+    background-color: rgb(73, 73, 73);
+}
+
+button {
+    display: block;
+    margin: auto;
+    margin-bottom: 70px;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 35px;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+button:active {
+    background-color: rgb(56, 56, 56);
+}
+
+.target {
+    background-color: rgb(255, 255, 255);
+}
+
+.target:hover {
+    background-color: rgb(179, 179, 179);
+}
+
+.info {
+    font-size: 35px;
+    display: flex;
+    flex-direction: row;
+    margin:  90px auto ;
+    height: 50px;
+    width: 700px;
+    justify-content: space-evenly;
+    gap: 20px;
+
+}
+
+.info-label {
+    display: inline;
+    flex-grow: 1;
+
+}
+
+.space {
+    flex-grow: 7;
+}
+
+.score {
+    display: inline;
+    flex-grow: 1;
+    
+    
+}
+
+.time {
+    display: inline;
+    flex-grow: 1;
+
+}
+
+.restart {
+    background-color: red;
+    color: white;
+}
