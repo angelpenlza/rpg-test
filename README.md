@@ -3,7 +3,7 @@
 Purpose:    wanna mess around with stuff to better my understanding of it and work on my logic
 Using:      HTML, CSS, JavaScript, XAMPP, PHP, SQL 
 
-----------------------------------------------------------------------------------------------------------------------
+--------------------------
 
 1   First, I needed to get XAMPP up. I used XAMPP to be able to practice and use PHP. To use XAMPP, first I needed to open the XAMPP control panel and start the Apache and SQL modules. 
 
@@ -14,14 +14,27 @@ Using:      HTML, CSS, JavaScript, XAMPP, PHP, SQL
     For Mac, it was the same commands, but the XAMPP panel doesn't have a shell option on there, so we have to go to the a file (i forgot which one but i'll update when i find out, i think it was either 'xampp' or 'xamppfiles'). 
 
 3   Commands: 
+    to view tables: show tables;
+-- to create database --
     create database rpg;
     use rpg;
+-- to create users table for logins/signups --
     create table users (userID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, username VARCHAR(255), password VARCHAR(255));
+-- to create scores table for saving high scores --
+    create table userScores (userID INT NOT NULL PRIMARY KEY, wpm INT, accuracy INT);
 
 4   For steps, these were the only ones that don't have a file attached to them, so the rest of 
     steps will be included as comments in the rest of the files, assuming I had issues with them
     or they are not obvious. 
 
+** for XAMPP on MAC ** 
+- when the MariaDB isn't working use the commands
+    sudo killall mysqld
+    sudo /Applications/XAMPP/xamppfiles/bin/mysql.server start
+- to get to MariaDB, go to Applications/XAMPP/xamppfiles/bin, and run
+    ./mysql -u root -p
+- if you forget the password, run 
+    ./mysql.admin 
 
 
 

@@ -1,0 +1,64 @@
+.type-menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+
+}
+
+.refresh {
+    background-color: rgb(55, 55, 55);
+    border: none;
+    color: white;
+    font-size: 20px;
+    height: 35px;
+    width: 35px;
+}
+
+.refresh:hover {
+    background-color: rgb(68, 68, 68);
+}
+
+.score {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.words {
+    margin: 40px;
+    width: 70%;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+input {
+    border: white;
+    border-radius: 15px;
+    background-color: rgb(111, 111, 111);
+    height: 25px;
+    width: 25px;
+    color: rgb(111, 111, 111);
+}
+
+p {
+    display: inline;
+}
+
+.correct {
+    color: rgb(119, 255, 119);
+    border-bottom: solid;
+}
+
+.incorrect {
+    color: rgb(255, 125, 125);
+    border-bottom: solid;
+
+}
+
+.char {
+    color: rgb(255, 255, 255);
+}
+
+
+
+

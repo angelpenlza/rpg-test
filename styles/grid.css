@@ -19,8 +19,8 @@ h2 {
 .box, .target {
     background-color: rgb(44, 44, 44);
     border: solid;
-    height: 170px;
-    width: 170px;
+    height: 100px;
+    width: 100px;
 }
 
 .box:hover {

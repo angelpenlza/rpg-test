@@ -107,4 +107,3 @@ generateWords();
 userInput.addEventListener('keydown', startGame);
 
 
-
