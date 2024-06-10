@@ -94,8 +94,9 @@ function sendData(score) {
     console.log('in the function');
     let xhr = new XMLHttpRequest();
     xhr.open('POST', '../pages/process.php', true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.send("value=" + score);
     xhr.onreadystatechange = function () {
-        WPM.innerHTML = score;
+        WPM.innerHTML = "wpm: " + xhr.responseText;
     };
-    xhr.send('value=' + encodeURIComponent(score));
 }

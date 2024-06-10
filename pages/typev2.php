@@ -19,7 +19,6 @@
         <input id="userInput" type="text">
         <h3 class="wpm" id="wpm">wpm: --</h3>
         <h3 class="acc" id="acc">accuracy: --</h3>
-        <a href="../pages/process.php">score</a>
     </div>
     <script src="../logic/typev2.js"></script>
 </body> 

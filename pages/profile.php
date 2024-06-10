@@ -4,6 +4,7 @@
         $conn = mysqli_connect("localhost", "root", "ApDpVm14", "rpg");
         
     }
+    $loggedin = false;
     if(isset($_SESSION["loggedin"])) {
         $username = $_SESSION["username"];
         $userID = $_SESSION["userID"];
@@ -20,27 +21,26 @@
     <title>game</title>
 </head>
 <body>
+    
     <?php include 'nav.php' ?>
-    <h2><?php 
-        if($loggedin) 
-            echo "$username's top scores."; 
-        else {
-            echo "<a href='login.php'>log in</a> to save your stats";
-        }
-    ?></h2>
     <?php   
-        $result = $conn->query("SELECT * FROM userScores WHERE userID = $userID");
         if($loggedin): ?>
+        <?php $result = $conn->query("SELECT wpm FROM userscores WHERE userID = $userID"); ?>
         <div class="scores">
+                <h2><?php echo $username ?>'s top scores</h2>
                 <h3>WPM: <?php
                     if($result->num_rows < 0)
                         echo "--";
                     else 
-                        echo $result->num_rows;
+                        while($row = $result->fetch_assoc()) {
+                            $wpm = $row["wpm"];
+                            echo "wpm: " . $wpm;
+                        }
                 ?> </h3>
                 <h3>Highest Score:</h3>
         </div>
+    <?php else: ?>
+        <h2><a href="login.php">log in</a> to save your stats<h2>
     <?php endif; ?>
-    
 </body>
 </html>

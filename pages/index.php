@@ -19,7 +19,7 @@
     <?php include 'nav.php' ?>
     <h2>welcome<?php if(isset($_SESSION["loggedin"])) echo ", $username!"; else echo "!" ?> </h2>
     <a class="game" href="aim.php">aim trainer</a>
-    <a class="game" href="type.php">typing game</a>
+    <a class="game" href="typev2.php">typing game</a>
     <a class="game" href="other.php">tbd</a>
     
 </body>

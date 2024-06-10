@@ -1,29 +1,31 @@
-<h2>test</h2>
 <?php 
  session_start();
 
  $conn = mysqli_connect("localhost", "root", "ApDpVm14", "rpg");
 
- if($conn->connect_error) 
+if($conn->connect_error) 
      exit("failed to connect: " . $conn->connect_error);
     
-     $username = $_POST["username"];
-     $password = $_POST["password"];
-     $userID = $_POST["userID"];
-
- if($_SERVER['REQUEST_METHOD'] == 'POST') {
-        if(isset($_POST['value'])) {
-            if(isset($_SESSION['loggedin'])) {
-                $conn->query("INSERT INTO userScores (wpm) VALUES ($_POST['value'])");
-            }
-            $value = $_POST['value'];
-
-            
-            echo "value: " . htmlspecialchars($value);
+if(isset($_SESSION['loggedin'])) {
+    $userID = $_SESSION["userID"];
+    $value = $_POST['value'];
+    if(isset($value)) {
+        $result = $conn->query("SELECT userID FROM userscores WHERE userID = $userID");
+        if($result->num_rows === 0) {
+            $conn->query("INSERT INTO userScores (userID, wpm) VALUES ($userID, $value)");
         } else {
-            echo "no value yet";
+            $score = $conn->query("SELECT wpm FROM userScores WHERE userID = $userID");
+            while($row = $score->fetch_assoc()) {
+                $wpm = $row['wpm'];
+                if($wpm < $value) {
+                    $conn->query("UPDATE userScores SET wpm = $value WHERE userID = $userID");
+                }
+            } 
         }
+        echo htmlspecialchars($value);
     } else {
-        echo "no method";
+        echo "wpm: --";
     }
+}
+
 ?> 
