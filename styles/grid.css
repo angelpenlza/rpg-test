@@ -96,3 +96,32 @@ button:active {
     background-color: red;
     color: white;
 }
+
+.game-over {
+    background-color: rgb(253, 84, 84);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    justify-content: center;
+    border-color: rgb(124, 0, 0);
+    width: 300px;
+    transform: translate(0, -500px);
+    border-radius: 30px;
+    color: rgb(124, 0, 0);
+}
+
+.over-title {
+    text-align: center;
+}
+
+.clear {
+    background-color: red;
+    color: rgb(124, 0, 0);
+    font-size: 20px;
+    margin: 10px auto;
+}
+
+.clear:hover {
+    background-color: rgb(156, 0, 0);
+}

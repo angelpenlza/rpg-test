@@ -10,7 +10,7 @@
 <body>
     <?php include 'nav.php'; ?>
     <h2>aim trainer</h2>
-    <div class="grid">
+    <div id="grid" class="grid">
         <div class="row">
             <div id="1" class="box"></div>
             <div id="2" class="box"></div>
@@ -35,6 +35,7 @@
             <div id="15" class="box"></div>
             <div id="16" class="box"></div>
         </div>
+        <div id="overBox"></div>
         <div class="info">
             <h3 class="info-label">Score: </h3><h3 id="score" class="score"></h3>
             <h3 class="space"></h3>
